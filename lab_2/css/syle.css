@@ -1,0 +1,30 @@
+.table td, .table th {
+    border: 1px;
+    border-color: #6395ff;
+    padding: 5px 10px 5px 10px;
+}
+
+/* Проміжки таблиці */
+table {
+    width: 500px;
+}
+
+table, thead {
+    background-color: #dae1f8;
+}
+
+table, th, td {
+    border: 1px solid #6395ff;
+    border-collapse: collapse;
+}
+
+.table tfoot {
+    background-color: #5776b1;
+    color: #FFF;
+    float: right;
+}
+
+.colspan-item {
+    text-align: end;
+    color: #FFF;
+}
