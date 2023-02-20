@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Підключення CSS файлу -->
+    <link rel="stylesheet" href="css/css-table-1">
+
+    <title>Таблиці</title>
+
+    <style>
+        .table td,
+        .table th {
+            border: 1px;
+            border-color: #6395ff;
+            padding: 5px 10px 5px 10px;
+        }
+
+        /* Проміжки таблиці */
+        table {
+            width: 500px;
+        }
+
+        table,
+        thead {
+            background-color: #dae1f8;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #6395ff;
+            border-collapse: collapse;
+        }
+
+        .table tfoot {
+            background-color: #5776b1;
+            color: #FFF;
+            float: right;
+        }
+
+        .colspan-item {
+            text-align: end;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Перша таблиця -->
+    <table>
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Ім'я</th>
+                <th lang="en">E-mail</th>
+                <th>Стать</th>
+                <th>Дата</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Вася</td>
+                <td>vasya@gmail.com</td>
+                <td>Ч</td>
+                <td>08.02.23</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Мирон</td>
+                <td>myrona@gmail.com</td>
+                <td>Ч</td>
+                <td>08.02.23</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Неля</td>
+                <td>nelya@gmail.com</td>
+                <td>Ж</td>
+                <td>08.02.23</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="5" class="colspan-item">Всього 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <a href="/index.html">Стартова</a>
+    <a href="/photo.html">Зображення</a>
+
+
+</body>
+
+</html>
