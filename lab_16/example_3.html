@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Article header</h2>
+    <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Another text</p>
+    </div>
+
+    <script>
+        let all = document.querySelector('div');
+
+        let allElemets = all.querySelectorAll('p');
+
+        allElemets.forEach((p) => {
+            console.log(p.textContent);
+        });
+    </script>
+</body>
+
+</html>
