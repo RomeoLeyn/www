@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="button">Live button</button>
+
+    <div id="element"></div>
+
+    <script>
+
+
+        let button = document.getElementById("button");
+
+        let element = document.getElementById("element");
+
+        button.addEventListener("click", function() {
+            let p = document.createElement("p");
+            p.innerHTML = "I was pressed!";
+            element.appendChild(p);
+        });
+
+        button.addEventListener('mouseover', function () {
+            let p = document.createElement("p");
+            p.innerHTML = "Mouse on me!";
+            element.appendChild(p);
+        });
+
+        button.addEventListener('mouseout', function () {
+            let p = document.createElement("p");
+            p.innerHTML = "Mouse out!";
+            element.appendChild(p);
+        });
+    </script>
+</body>
+
+</html>

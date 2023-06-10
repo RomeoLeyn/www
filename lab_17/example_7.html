@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+
+    <select name="cities" id="cities"></select>
+
+    <script>
+
+        function getCitiesForCountry(country) {
+            let cities = [];
+
+            if (country === 'ger') {
+                cities = ['Berlin'];
+            } else if (country === 'usa') {
+                cities = ['New-York'];
+            } else if (country === 'ukr') {
+                cities = ['Ternopil'];
+            }
+
+            return cities;
+        }
+
+        let country = document.getElementById("country");
+        let city = document.getElementById("cities");
+
+        country.addEventListener('change', function () {
+            const selectedCountry = country.value;
+            const cities = getCitiesForCountry(selectedCountry);
+
+            city.innerHTML = "";
+
+            cities.forEach(cityName => {
+                let newOption = document.createElement("option");
+                newOption.textContent = cityName;
+                city.appendChild(newOption);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

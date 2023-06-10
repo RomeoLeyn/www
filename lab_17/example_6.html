@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <p>Width: <span id="first"></span></p>
+    <p>Height: <span id="second"></span></p>
+<body>
+    <script>
+        let width = screen.width;
+        let height = screen.height;
+
+        console.log(width);
+        console.log(height);
+
+        let first = document.getElementById("first");
+        first.textContent = width;
+
+        let second = document.getElementById("second");
+        second.innerHTML = height;
+    </script>
+</body>
+</html>
