@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check First Character Uppercase</title>
+  <script>
+    function checkFirstCharacterUpperCase(string) {
+      var pattern = /^[A-Z]/;
+      return pattern.test(string);
+    }
+    
+    function handleCheck() {
+      var inputElement = document.getElementById("inputString");
+      var inputValue = inputElement.value;
+      
+      var resultElement = document.getElementById("result");
+      if (checkFirstCharacterUpperCase(inputValue)) {
+        resultElement.textContent = "String starts with uppercase character";
+      } else {
+        resultElement.textContent = "String does not start with uppercase character";
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="handleCheck()">Check</button>
+  <p id="result"></p>
+</body>
+</html>

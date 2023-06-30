@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Validation</title>
+  <script>
+    function validateCreditCardNumber(cardNumber) {
+      var pattern = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+      return pattern.test(cardNumber);
+    }
+    
+    function handleValidation() {
+      var inputElement = document.getElementById("inputCardNumber");
+      var cardNumber = inputElement.value;
+      
+      var resultElement = document.getElementById("validationResult");
+      if (validateCreditCardNumber(cardNumber)) {
+        resultElement.textContent = "Valid credit card number";
+      } else {
+        resultElement.textContent = "Invalid credit card number";
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="inputCardNumber" placeholder="Enter credit card number">
+  <button onclick="handleValidation()">Validate</button>
+  <p id="validationResult"></p>
+</body>
+</html>

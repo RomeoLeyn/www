@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Swap Substrings</title>
+  <script>
+    function swapSubstring(str) {
+      var pattern = /(\w+)\s+(\w+)/;
+      var swappedStr = str.replace(pattern, "$2, $1");
+      return swappedStr;
+    }
+    
+    function handleSwap() {
+      var inputElement = document.getElementById("inputString");
+      var inputValue = inputElement.value;
+      
+      var resultElement = document.getElementById("result");
+      var swappedString = swapSubstring(inputValue);
+      resultElement.textContent = swappedString;
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="handleSwap()">Swap</button>
+  <p id="result"></p>
+</body>
+</html>

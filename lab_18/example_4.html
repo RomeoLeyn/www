@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Validation</title>
+  <script>
+    function validateEmail(email) {
+      var pattern = /^[A-Za-z0-9]+([_\-.][A-Za-z0-9]+)*@[A-Za-z0-9]+([_\-.][A-Za-z0-9]+)*\.[A-Za-z]{2,}$/;
+      return pattern.test(email);
+    }
+    
+    function handleValidation() {
+      var inputElement = document.getElementById("inputEmail");
+      var email = inputElement.value;
+      
+      var resultElement = document.getElementById("validationResult");
+      if (validateEmail(email)) {
+        resultElement.textContent = "Valid email";
+      } else {
+        resultElement.textContent = "Invalid email";
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="inputEmail" placeholder="Enter email">
+  <button onclick="handleValidation()">Validate</button>
+  <p id="validationResult"></p>
+</body>
+</html>
