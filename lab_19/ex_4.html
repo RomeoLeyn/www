@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <input type="checkbox" class="checkbox">
+  <input type="checkbox" class="checkbox">
+  <input type="checkbox" class="checkbox">
+  <input type="checkbox" class="checkbox">
+  <input type="checkbox" class="checkbox">
+  <input type="checkbox" class="checkbox">
+  
+  <script>
+    $(document).ready(function() {
+      var checkboxCount = 0;
+      
+      $('.checkbox').change(function() {
+        if ($(this).is(':checked')) {
+          checkboxCount++;
+        } else {
+          checkboxCount--;
+        }
+        
+        if (checkboxCount >= 3) {
+          $('.checkbox').prop('disabled', true);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
